@@ -34,8 +34,6 @@ public class DBConnection {
             System.exit(0);
         }
     }
-    public static void main(String[] args) {
-        
-    }
+    
     
 }
