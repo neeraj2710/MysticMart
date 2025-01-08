@@ -23,5 +23,5 @@ Mystic Mart is a Java-based desktop application designed for managing inventory 
    git clone https://github.com/neeraj2710/MysticMart.git
 
 ## Working
-
+https://github.com/user-attachments/assets/028eca69-1e7e-49e0-8797-c4f0a416332d
 
