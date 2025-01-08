@@ -20,5 +20,5 @@ Mystic Mart is a Java-based desktop application designed for managing inventory 
 2. Set up Oracle 11g Database and configure it with the provide DBConnection.java class
 3. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/mystic-mart.git
+   git clone https://github.com/neeraj2710/MysticMart.git
 
