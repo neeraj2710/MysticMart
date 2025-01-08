@@ -7,7 +7,7 @@ Mystic Mart is a Java-based desktop application designed for managing inventory 
 - Admin Module: Manage employees, inventory, and view past orders.
 - Cashier Module: Handle billing and view previous bills.
 - Barcode generation for products.
-- Password encryption using Base64.
+
 
 ## Technologies Used
 - **Programming Language:** Java
@@ -21,4 +21,7 @@ Mystic Mart is a Java-based desktop application designed for managing inventory 
 3. Clone this repository:
    ```bash
    git clone https://github.com/neeraj2710/MysticMart.git
+
+## Working
+
 
