@@ -33,13 +33,18 @@ public class OrderDAO {
     }
 
     public static boolean addOrder(List<ProductPojo> al, String ordId) throws SQLException {
-        PreparedStatement ps = DBConnection.getConn().prepareStatement("insert into orders values (?,?,?,?)");
+        PreparedStatement ps = DBConnection.getConn().prepareStatement("insert into orders values (?,?,?,?,?,?,?,?,?)");
         int count=0;
         for (ProductPojo p : al) {
             ps.setString(1, ordId);
             ps.setString(2, p.getProductId());
-            ps.setInt(3, p.getQuantity());
-            ps.setString(4, UserProfile.getUserid());
+            ps.setString(3, p.getProductName());
+            ps.setString(4, p.getProductCompany());
+            ps.setDouble(5, p.getProductPrice());
+            ps.setDouble(6, p.getOurPrice());
+            ps.setInt(7, p.getTax());
+            ps.setInt(8, p.getQuantity());
+            ps.setString(9, UserProfile.getUserid());
             count=count+ps.executeUpdate();
         }
         return count==al.size();
@@ -94,5 +99,6 @@ public class OrderDAO {
         }
         return idList;
 }
+    
 
 }
