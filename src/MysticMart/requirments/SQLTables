@@ -1,0 +1,35 @@
+                                                   Tables
+                                                   =======
+employees
+===========
+create table employees (empid varchar2(20),empname varchar2(20),job varchar2(20),salary number(10));
+
+orders
+======
+create table orders(order_id varchar2(20),p_id varchar2(20),p_name varchar2(20),p_company varchar2(20),
+p_price number(10,2),our_price number(10,2),tax number(3),quantity number(5),userid varchar2(20));
+
+products
+========
+create table products(p_id varchar2(20),p_name varchar2(20),p_companyname varchar2(20),p_price number(10,2),
+our_price number(10,2),p_tax number(3),quantity number(5));
+
+users
+=====
+create table users(userid varchar2(20),empid varchar2(20),password varchar2(20),usertype varchar2(20),
+username varchar2(20));
+
+                                                insert data
+                                                ===========
+1) insert into employees values('E101','Yash','Manager',50000);
+2) insert into users values('yash@123','E101','admin','Manager','Yash');
+
+                                                Constraints
+                                                ===========
+
+1) alter table employees add constraint EID_EMP_PK primary key(empid);
+2) alter table users add constraint EID_EMP_fK foreign key(empid) references employees(empid);
+3) alter table users add constraint UID_USE_PK primary key(userid);
+4) alter table products add constraint PID_PRO_PK primary key(p_id);
+5) alter table orders add constraint OID_PID_ORD_PK primary key(order_id,p_id);
+6) alter table orders add constraint PID_ORD_fK foreign key(p_id) references products(p_id);

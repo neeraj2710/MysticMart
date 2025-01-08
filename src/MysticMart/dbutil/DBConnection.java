@@ -26,13 +26,16 @@ public class DBConnection {
     }
     static{
         try{
-            conn=DriverManager.getConnection("jdbc:oracle:thin:@//PrachiSharma:1521/xe","MysticMart","mart");
+            conn=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","mysticmart","mysticmart");
             //JOptionPane.showMessageDialog(null,"Connected successfully");
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Connot open Connection");
             ex.printStackTrace();
             System.exit(0);
         }
+    }
+    public static void main(String[] args) {
+        
     }
     
 }
